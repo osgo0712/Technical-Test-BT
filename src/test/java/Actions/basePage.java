@@ -45,6 +45,8 @@ public class basePage extends PageObject{
 
 	public void click(By element) throws Exception {
 		try {
+			WebDriverWait myWaitVar = new WebDriverWait(getDriver(), 20);
+			myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(element));
 			getDriver().findElement(element).click();
 		} catch (Exception e) {
 			throw new Exception("No se pudo realizar clic sobre el elemento " + element);
@@ -159,9 +161,13 @@ public class basePage extends PageObject{
 	protected void input(String inputText, By locator) throws Exception {
 		try {
 			if (inputText != null){
+				WebDriverWait myWaitVar = new WebDriverWait(getDriver(), 20);
+				myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(locator));
 				getDriver().findElement(locator).clear();
 				getDriver().findElement(locator).sendKeys(inputText);
 			} else {
+				WebDriverWait myWaitVar = new WebDriverWait(getDriver(), 20);
+				myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(locator));
 				getDriver().findElement(locator).sendKeys(inputText);
 			}
 		} catch (Exception e) {

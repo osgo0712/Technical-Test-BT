@@ -1,26 +1,34 @@
 package Steps;
 
+import PageObject.bookStoreApplicationPageObject;
 import net.thucydides.core.annotations.Step;
-import PageObject.inquiryRentalPageObject;
 
-public class inquiryRentalSteps {
+public class bookStoreApplicationSteps {
 	
-	inquiryRentalPageObject inquiryRentalPageObject; 
+	bookStoreApplicationPageObject bookStoreApplicationPageObject;
 	
 	@Step
 	public void openApp() {
-		inquiryRentalPageObject.open();
-	}
-	
-	public void diligenciarCampos(String localidad) {
-		inquiryRentalPageObject.diligenciarCampos(localidad);
+		bookStoreApplicationPageObject.open();
 	}
 
-	public void confirmarConsulta() {
-		inquiryRentalPageObject.confirmarConsulta();
+	@Step
+	public void login(String userName, String password) {
+		bookStoreApplicationPageObject.login(userName, password);
 	}
-	
-	public void validarConsulta() {
-		inquiryRentalPageObject.validarConsulta();
+
+	@Step
+	public void enterBookStore() {
+		bookStoreApplicationPageObject.enterBookStore();
+	}
+
+	@Step
+	public void selectBook() {
+		bookStoreApplicationPageObject.selectBook();
+	}
+
+	@Step
+	public void addBook() {
+		bookStoreApplicationPageObject.addBook();
 	}
 }

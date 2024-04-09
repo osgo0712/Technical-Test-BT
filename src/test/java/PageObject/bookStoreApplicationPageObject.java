@@ -2,32 +2,25 @@ package PageObject;
 
 import static org.junit.Assert.fail;
 
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import Actions.basePage;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.WhenPageOpens;
 
-@DefaultUrl ("https://milescarrental.com")
+@DefaultUrl ("https://demoqa.com/login")
 
-public class inquiryRentalPageObject extends basePage{
-
-	//VARIABLES GLOBALES
-	String user, pass;
+public class bookStoreApplicationPageObject extends basePage{
 
 	//CREACION ELEMENTOS
-	static By dest = generalElements.dest.getValor_campo();
-	static By btnAct = generalElements.btnAct.getValor_campo();
-	static By dateAct = generalElements.dateAct.getValor_campo();
-	static By btnEnd = generalElements.btnEnd.getValor_campo();
-	static By dateEnd = generalElements.dateEnd.getValor_campo();
-	static By btnConfi = generalElements.btnConfi.getValor_campo();
-	static By ValCon = generalElements.ValCon.getValor_campo();
+
+	static By userNameLocator = generalElements.userName.getValor_campo();
+	static By passwordLocator = generalElements.password.getValor_campo();
+	static By loginLocator = generalElements.login.getValor_campo();
+	static By bookStoreAplicationLocator = generalElements.bookStoreAplication.getValor_campo();
+	static By bookStoreLocator = generalElements.bookStore.getValor_campo();
+	static By bookLocator = generalElements.book.getValor_campo();
 
 
 	@WhenPageOpens
@@ -37,75 +30,59 @@ public class inquiryRentalPageObject extends basePage{
 		Thread.sleep(1000);
 	}
 
-	public void diligenciarCampos(String localidad) {
-		
-		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		
+	public void login(String userName, String password) {
+
 		try {
-			Robot robot = new Robot();
-			waitImplicit(dest);
-			input(localidad, dest);
-			Thread.sleep(2000);
-			robot.keyPress(KeyEvent.VK_A);
-			Thread.sleep(3000);
-			robot.keyPress(KeyEvent.VK_DOWN);
-			robot.keyPress(KeyEvent.VK_ENTER);
-			Thread.sleep(2000);	
-			js.executeScript("window.scrollBy(0,200)");
-			Thread.sleep(2000);	
-			waitImplicit(btnAct);
-			click(btnAct);
-			Thread.sleep(2000);	
-			waitImplicit(dateAct);
-			click(dateAct);
-			Thread.sleep(2000);	
-			waitImplicit(dateEnd);
-			click(dateEnd);
-			Thread.sleep(2000);	
-
-		}catch(Exception e) {
-			System.out.println("***************************************************************************************");
-			System.out.println("[MilesCarrental.com] - ERROR: "+e.getMessage());
-			System.out.println("***************************************************************************************");
-
-			fail();
-		}
-	}
-
-	public void confirmarConsulta() {
-		
-		try {
-			waitImplicit(btnConfi);
-			click(btnConfi);
-			Thread.sleep(2000);
-			
-		}catch(Exception e) {
-			System.out.println("***************************************************************************************");
-			System.out.println("[MilesCarrental.com] - ERROR: "+e.getMessage());
-			System.out.println("***************************************************************************************");
-
-			fail();
-		}
-	}
-	
-	public void validarConsulta() {
-		
-		try {
-			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
-			js.executeScript("window.scrollBy(0,150)");
-			Thread.sleep(8000);
-			waitImplicit(ValCon);
-			click(ValCon);
-			Thread.sleep(5000);
-			getDriver().quit();
-			
+			js.executeScript("window.scrollBy(0,300)");
+			input(userName, userNameLocator);
+			input(password, passwordLocator);
+			click(loginLocator);
+
 		}catch(Exception e) {
 			System.out.println("***************************************************************************************");
-			System.out.println("[MilesCarrental.com] - ERROR: "+e.getMessage());
+			System.out.println("[AutomationExercise.com] - ERROR: "+e.getMessage());
 			System.out.println("***************************************************************************************");
 
 			fail();
 		}
+	}
+	public void enterBookStore() {
+
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+			click(bookStoreAplicationLocator);
+			click(bookStoreLocator);
+
+		}catch(Exception e) {
+			System.out.println("***************************************************************************************");
+			System.out.println("[AutomationExercise.com] - ERROR: "+e.getMessage());
+			System.out.println("***************************************************************************************");
+
+			fail();
+		}
+	}
+
+	public void selectBook() {
+
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+			js.executeScript("window.scrollBy(0,700)");
+			click(bookLocator);
+
+		}catch(Exception e) {
+			System.out.println("***************************************************************************************");
+			System.out.println("[AutomationExercise.com] - ERROR: "+e.getMessage());
+			System.out.println("***************************************************************************************");
+
+			fail();
+		}
+	}
+
+	public void addBook() {
+			/**
+			 * No se puede continuar con el flujo debido a que la siguinte page no carga, validar
+			 * en las evidencias del reporte de serenity
+			 */
 	}
 }

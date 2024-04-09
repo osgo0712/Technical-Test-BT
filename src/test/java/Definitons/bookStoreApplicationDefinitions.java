@@ -7,7 +7,7 @@ import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import Steps.*;
 
-public class validateDemoQaDefinitions {
+public class bookStoreApplicationDefinitions {
 	
 	@Steps
 	bookStoreApplicationSteps bookStoreApplicationSteps;
@@ -34,7 +34,7 @@ public class validateDemoQaDefinitions {
 
 	@When("^Seleccionar la opción Add To Your Collection$")
 	public void seleccionar_la_opción_Add_To_Your_Collection() throws Throwable {
-		//bookStoreApplicationSteps.addBook();
+
 	}
 
 	@When("^Seleccionar la opción Aceptar de la alerta$")
@@ -61,4 +61,5 @@ public class validateDemoQaDefinitions {
 	public void validar_que_no_le_permita_ingresar_al_portal_con_el_usuario_que_elimino() throws Throwable {
 
 	}
+
 }

@@ -16,16 +16,16 @@ Feature: Como usuario deseo poder iniciar sesion en la pagina web demoqa y utili
     Examples:
     | UserName     		| | Password     		|
     | test01            | | Test2023*     		|
-    | test02            | | Test2023*     		|
 
   @Escenario2
   Scenario Outline: Realizar inicio de sesion y poder agregar un nuevo libro a la coleccion
     Given El usuario ingresa a la pagina principal de demoqa
     When Ingresa los campos "<UserName>" y "<Password>" e inicia sesion seleccionando el boton de login
-    And Ingresar al módulo Alerts, Frame & Windows y seleccionar la opción Nested Frames
+    And Ingresar al módulo Alerts, Frame & Windows
+    And Selecciona la opción Nested Frames
     And Leer texto Parent frame y Child Iframe
     And Ingresar Forms y seleccionar la opción Practice Form
-    And Diligenciar el formulario con los campos "<UserName>", "<UserName>", "<UserName>", "<UserName>", "<UserName>", "<UserName>" y seleccionar el boton submit
+    And Diligenciar el formulario con los campos "<FirstName>", "<LastName>", "<Email>", "<Mobile>", "<Subjects>", "<CurrentAddress>" y seleccionar el boton submit
     And Cerrrar la ventana modal de confirmacion del registro
     And Seleccionar la opcion profile
     And Seleccionar la opcion de eliminar cuenta
@@ -33,8 +33,8 @@ Feature: Como usuario deseo poder iniciar sesion en la pagina web demoqa y utili
     Then Validar que no le permita ingresar al portal con el usuario que elimino
 
     Examples:
-      | FirstName     | | LastName  | |     Email           ||  Mobile    || Subjects  |  CurrentAddress  |
-      | Prueba01      | | Prueba01  | | prueba@yopmail.com  || 3104985492 || Aspirante
+      | UserName     	  | | Password     	    	|| FirstName     | | LastName  | |     Email           ||  Mobile    || Subjects  ||  CurrentAddress             |
+      | test02            | | Test2023*     		|| Prueba01      | | Prueba01  | | prueba@yopmail.com  || 3104985492 || Aspirante || Autopista Norte al oriente  |
 
     
     	
