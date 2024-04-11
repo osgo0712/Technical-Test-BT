@@ -1,4 +1,4 @@
-package Runner;
+package runner;
 
 import org.junit.runner.RunWith;
 
@@ -8,10 +8,10 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features = "src/test/resources/features/validateDemoQa.feature",
-		glue = {"Definitons"},
-		tags = "@Escenario2"
+		features = "src/test/resources/features",
+		glue = {"definitons"},
+		tags = "@EscenarioWeb1, @EscenarioWeb2, @EscenarioApi"
 )
-public class runner {
+public class Runner {
 
 }

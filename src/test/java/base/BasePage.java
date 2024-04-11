@@ -1,4 +1,4 @@
-package Actions;
+package base;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import net.serenitybdd.core.pages.PageObject;
 
-public class basePage extends PageObject{
+public class BasePage extends PageObject{
 
 	//public AppiumDriver driver;
 
@@ -286,27 +286,21 @@ public class basePage extends PageObject{
 	 * "iframe", con la automatización normal no funcionaría ya que existen campos para selecionar dentro del iframe,
 	 * con esta acción podemos obtener los elementos y acceder a sus respectivas funciones para seguir con la automatización
 	 */
-	protected void validateIframe(){
-		String mainTab = getDriver().getWindowHandle();
-		String newTab = "";
-
-		/**
-		 * Utilizar en dado caso que habran muchas pestañas, dependiendo de la pestaña que tienen el iframe se cambia en la linea
-		 * @Params driver.switchTo().window(tabs2.get ( 3)), en el numero 3 se coloca el numero de la pestaña como se corresponde,
-		 * cabe mencionar que esto se maneja con arrays en dado caso la pestaña inicial es la numero 0.
-
-	        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-	        driver.switchTo().window(tabs2.get(3));
-	        WebElement iFrame = driver.findElement(By.tagName("iframe"));
-	        driver.switchTo().frame(iFrame);
-		 */
-
-		ArrayList<String> tab = new ArrayList<String>(getDriver().getWindowHandles());
-		for (String actual : tab){
-			if (!actual.equalsIgnoreCase(actual) || actual.equalsIgnoreCase(mainTab)){
-				WebElement iFrame = getDriver().findElement(By.tagName("iframe"));
-				getDriver().switchTo().frame(iFrame);
-			}
+	protected void validateIframe(String typeLocator, String locator){
+		switch (typeLocator) {
+			case "id":
+				WebElement iframe = getDriver().findElement(By.id(locator));
+				getDriver().switchTo().frame(iframe);
+				break;
+			case "tagName":
+				WebElement iframe1 = getDriver().findElement(By.tagName(locator));
+				getDriver().switchTo().frame(iframe1);
+				break;
+			case "className":
+				WebElement iframe2 = getDriver().findElement(By.className(locator));
+				getDriver().switchTo().frame(iframe2);
+				break;
+			default:
 		}
 	}
 

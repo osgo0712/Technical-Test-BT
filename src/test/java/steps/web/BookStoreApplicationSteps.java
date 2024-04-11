@@ -1,11 +1,11 @@
-package Steps;
+package steps.web;
 
-import PageObject.bookStoreApplicationPageObject;
+import pageObject.web.BookStoreApplicationPageObject;
 import net.thucydides.core.annotations.Step;
 
-public class bookStoreApplicationSteps {
+public class BookStoreApplicationSteps {
 	
-	bookStoreApplicationPageObject bookStoreApplicationPageObject;
+	BookStoreApplicationPageObject bookStoreApplicationPageObject;
 	
 	@Step
 	public void openApp() {

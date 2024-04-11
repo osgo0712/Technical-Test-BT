@@ -1,26 +1,26 @@
-package PageObject;
+package pageObject.web;
 
 import static org.junit.Assert.fail;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import Actions.basePage;
+import base.*;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.WhenPageOpens;
+import pageObject.GeneralElements;
 
 @DefaultUrl ("https://demoqa.com/login")
 
-public class bookStoreApplicationPageObject extends basePage{
+public class BookStoreApplicationPageObject extends BasePage {
 
 	//CREACION ELEMENTOS
 
-	static By userNameLocator = generalElements.userName.getValor_campo();
-	static By passwordLocator = generalElements.password.getValor_campo();
-	static By loginLocator = generalElements.login.getValor_campo();
-	static By bookStoreAplicationLocator = generalElements.bookStoreAplication.getValor_campo();
-	static By bookStoreLocator = generalElements.bookStore.getValor_campo();
-	static By bookLocator = generalElements.book.getValor_campo();
+	static By userNameLocator = GeneralElements.userName.getValor_campo();
+	static By passwordLocator = GeneralElements.password.getValor_campo();
+	static By loginLocator = GeneralElements.login.getValor_campo();
+	static By bookStoreAplicationLocator = GeneralElements.bookStoreAplication.getValor_campo();
+	static By bookStoreLocator = GeneralElements.bookStore.getValor_campo();
+	static By bookLocator = GeneralElements.book.getValor_campo();
 
 
 	@WhenPageOpens
@@ -33,8 +33,7 @@ public class bookStoreApplicationPageObject extends basePage{
 	public void login(String userName, String password) {
 
 		try {
-			JavascriptExecutor js = (JavascriptExecutor) getDriver();
-			js.executeScript("window.scrollBy(0,300)");
+			scrollDown(userNameLocator);
 			input(userName, userNameLocator);
 			input(password, passwordLocator);
 			click(loginLocator);
@@ -50,7 +49,7 @@ public class bookStoreApplicationPageObject extends basePage{
 	public void enterBookStore() {
 
 		try {
-			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+			scrollDown(bookStoreAplicationLocator);
 			click(bookStoreAplicationLocator);
 			click(bookStoreLocator);
 
@@ -66,8 +65,7 @@ public class bookStoreApplicationPageObject extends basePage{
 	public void selectBook() {
 
 		try {
-			JavascriptExecutor js = (JavascriptExecutor) getDriver();
-			js.executeScript("window.scrollBy(0,700)");
+			scrollDown(bookLocator);
 			click(bookLocator);
 
 		}catch(Exception e) {

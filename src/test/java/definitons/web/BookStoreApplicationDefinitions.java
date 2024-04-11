@@ -1,16 +1,16 @@
-package Definitons;
+package definitons.web;
 
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import Steps.*;
+import steps.web.BookStoreApplicationSteps;
 
-public class bookStoreApplicationDefinitions {
+public class BookStoreApplicationDefinitions {
 	
 	@Steps
-	bookStoreApplicationSteps bookStoreApplicationSteps;
+	BookStoreApplicationSteps bookStoreApplicationSteps;
 
 	@Given("^El usuario ingresa a la pagina principal de demoqa$")
 	public void el_usuario_ingresa_a_la_pagina_principal_de_demoqa() throws Throwable {

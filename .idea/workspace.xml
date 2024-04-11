@@ -5,16 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54c020d4-3283-49fd-9c6d-bb9aeaea505f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/driver/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/base/BaseValidateConsumptionApis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/definitons/api/ValidateConsumptionApisDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/api/ValidateConsumptionApisPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/web/NestedFramesPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/web/NestedFramesSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/ValidateConsumptionApis.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Actions/basePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Definitons/bookStoreApplicationDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/definitons/web/BookStoreApplicationDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Definitons/nestedFramesDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/definitons/web/NestedFramesDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObject/bookStoreApplicationPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/web/BookStoreApplicationPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObject/generalElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/GeneralElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObject/nestedFramesPageObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Runner/runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/bookStoreApplicationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/web/BookStoreApplicationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/nestedFramesSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/validateDemoQa.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ValidateDemoQa.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2ewKatycJwDiV5dluAhnwDAFDHE" />
   <component name="ProjectViewState">
@@ -26,10 +52,59 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/Test/Technical-Test-BT",
+    "last_opened_file_path": "C:/Users/User/Desktop/Proyecto Local/MyShop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "75a1f6cf0c8977e7e2975074218136e4",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.Runner">
+    <configuration name="Feature: validateConsumptionApis" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/validateConsumptionApis.feature" />
+      <option name="GLUE" value="net.serenitybdd.cucumber.actors" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Technical-Test-BT" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: validateConsumptionApis" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Technical-Test-BT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.Runner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Runner" />
+        <item itemvalue="Cucumber Java.Feature: validateConsumptionApis" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,10 +114,27 @@
       <option name="presentableId" value="Default" />
       <updated>1712810266854</updated>
       <workItem from="1712810267993" duration="72000" />
+      <workItem from="1712810671286" duration="25890000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/base/BaseValidateConsumptionApis.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
